@@ -1,0 +1,24 @@
+{
+  "name": "supergile",
+  "version": "0.1.0",
+  "private": true,
+  "description": "YouGile issue provider plugin for Super Productivity",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "package": "node scripts/build.mjs --zip",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "fflate": "^0.8.2",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
