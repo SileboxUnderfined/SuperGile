@@ -1,63 +1,65 @@
 # 🔄 SuperGile
 
-**Задачи из YouGile — прямо в Super Productivity, и обратно.**
+🇬🇧 **English** · 🇷🇺 [Русский](README.ru.md)
 
-SuperGile — плагин для [Super Productivity](https://super-productivity.com/), который подтягивает задачи, назначенные на вас в [YouGile](https://yougile.com), и держит их в синхронизации в обе стороны. Закрыли задачу в Super Productivity — она отмечена выполненной в YouGile. Поставили дедлайн в YouGile — он появился у вас в планировщике.
+**Your YouGile tasks, right inside Super Productivity, and back.**
+
+SuperGile is a [Super Productivity](https://super-productivity.com/) plugin that pulls in the tasks assigned to you in [YouGile](https://yougile.com) and keeps them in sync both ways. Finish a task in Super Productivity and it is marked done in YouGile. Set a deadline in YouGile and it shows up in your planner.
 
 [![CI](https://github.com/SileboxUnderfined/SuperGile/actions/workflows/ci.yml/badge.svg)](https://github.com/SileboxUnderfined/SuperGile/actions/workflows/ci.yml)
 
 ---
 
-## 🤔 Зачем это нужно
+## 🤔 Why
 
-YouGile хорош для командной работы: доски, колонки, чаты в задачах. Super Productivity хорош для личной продуктивности: план на день, таймер, помодоро, учёт времени. Проблема в том, что жить приходится в двух местах сразу:
+YouGile is great for teamwork: boards, columns, chats inside tasks. Super Productivity is great for personal focus: a daily plan, timers, pomodoro, time tracking. The catch is living in two places at once:
 
-- 😩 задачи из YouGile приходится переписывать вручную;
-- 🤷 отметить выполнение нужно дважды;
-- ⏱️ затраченное время теряется или вбивается в YouGile по памяти.
+- 😩 YouGile tasks have to be copied over by hand;
+- 🤷 every task has to be marked done twice;
+- ⏱️ time spent gets lost or typed into YouGile from memory.
 
-SuperGile убирает эту двойную работу: YouGile остаётся источником задач для команды, а Super Productivity — вашим рабочим местом.
+SuperGile removes that double work: YouGile stays the team's source of tasks, and Super Productivity stays your workspace.
 
-## ✨ Что умеет
+## ✨ Features
 
-- 📥 **Автоимпорт.** Новые незавершённые задачи, назначенные на вас, сами появляются в бэклоге проекта.
-- ✅ **Выполнение в обе стороны.** Галочка в Super Productivity ставит флажок «выполнено» в YouGile, и наоборот.
-- 📝 **Название и описание.** Название синхронизируется в обе стороны, описание приходит из YouGile (HTML превращается в Markdown).
-- 📅 **Дедлайн.** Дата или дата со временем, в обе стороны.
-- ⏳ **Оценка времени.** План из таймтрекинга YouGile ↔ оценка задачи в Super Productivity.
-- ⏱️ **Затраченное время.** Когда вы закрываете задачу, Super Productivity предлагает записать время, и SuperGile прибавляет его к «затрачено» в YouGile.
-- 🗑️ **Удаление.** Задача, удалённая в YouGile, пропадает и из Super Productivity.
-- 🔍 **Поиск.** Любую задачу YouGile можно найти по названию и добавить вручную.
-- 📋 **Чек-листы** видны в карточке задачи.
+- 📥 **Auto import.** New open tasks assigned to you appear in the project backlog on their own.
+- ✅ **Done state both ways.** Ticking a task in Super Productivity sets the "completed" flag in YouGile, and vice versa.
+- 📝 **Title and description.** The title syncs both ways; the description comes from YouGile (HTML is converted to Markdown).
+- 📅 **Deadline.** A date or a date with time, both ways.
+- ⏳ **Time estimate.** The planned time from YouGile's time tracking ↔ the task estimate in Super Productivity.
+- ⏱️ **Time spent.** When you finish a task, Super Productivity offers to log the time, and SuperGile adds it to "spent" in YouGile.
+- 🗑️ **Deletion.** A task deleted in YouGile disappears from Super Productivity too.
+- 🔍 **Search.** Find any YouGile task by title and add it by hand.
+- 📋 **Checklists** are shown on the task card.
 
-### Как сопоставляются поля
+### How fields map
 
-| YouGile | Super Productivity | Направление |
+| YouGile | Super Productivity | Direction |
 | --- | --- | --- |
-| Выполнено (`completed`) | Готово | ↔️ |
-| Название | Название | ↔️ |
-| Описание | Заметки | ⬅️ из YouGile (можно включить ↔️) |
-| Дедлайн (дата) | Срок (день) | ↔️ |
-| Дедлайн (дата и время) | Срок (со временем) | ↔️ |
-| Таймтрекинг: план | Оценка времени | ↔️ |
-| Таймтрекинг: затрачено | Затраченное время | ➡️ при закрытии задачи |
-| Удалена | Задача удаляется | ⬅️ |
+| Completed (`completed`) | Done | ↔️ |
+| Title | Title | ↔️ |
+| Description | Notes | ⬅️ from YouGile (can be switched to ↔️) |
+| Deadline (date) | Due day | ↔️ |
+| Deadline (date and time) | Due with time | ↔️ |
+| Time tracking: plan | Time estimate | ↔️ |
+| Time tracking: spent | Time spent | ➡️ when the task is done |
+| Deleted | Task is removed | ⬅️ |
 
-Направление каждого поля можно поменять в настройках провайдера в Super Productivity.
+You can change the direction of each field in the provider settings in Super Productivity.
 
-## 📦 Установка
+## 📦 Installation
 
-1. Скачайте `supergile-<версия>.zip` со страницы [Releases](https://github.com/SileboxUnderfined/SuperGile/releases).
-2. В Super Productivity откройте **Настройки → Плагины** и загрузите zip.
-3. Включите плагин. В проекте откройте **Настройки проекта → Интеграции** и добавьте провайдер **YouGile**.
-4. Вставьте ключ API (как его получить, смотрите ниже) и нажмите «Проверить соединение».
+1. Download `supergile-<version>.zip` from [Releases](https://github.com/SileboxUnderfined/SuperGile/releases).
+2. In Super Productivity open **Settings → Plugins** and upload the zip.
+3. Enable the plugin. In your project open **Project settings → Integrations** and add the **YouGile** provider.
+4. Paste your API key (see below how to get one) and click "Test connection".
 
-> 💡 Нужен Super Productivity 19 или новее: в нём появилась двусторонняя синхронизация для плагинов.
-> Работает в desktop-версии и на телефоне. В браузерной версии запросы может заблокировать CORS.
+> 💡 Requires Super Productivity 19 or newer, which added two-way sync for plugins.
+> Works in the desktop app and on mobile. In the browser version, requests may be blocked by CORS.
 
-## 🔑 Как получить ключ API
+## 🔑 Getting an API key
 
-Ключ выдаётся по логину и паролю YouGile. Проще всего так (нужен [Node.js](https://nodejs.org/) 20+):
+YouGile issues keys for your login and password. The easiest way (needs [Node.js](https://nodejs.org/) 20+):
 
 ```bash
 git clone https://github.com/SileboxUnderfined/SuperGile.git
@@ -65,95 +67,95 @@ cd SuperGile
 npm run api-key
 ```
 
-Скрипт спросит почту и пароль, покажет ваши компании и выдаст ключ. Пароль уходит только в YouGile и нигде не сохраняется.
+The script asks for your email and password, lists your companies and prints a key. The password goes only to YouGile and is never saved.
 
 <details>
-<summary>То же самое через curl</summary>
+<summary>The same with curl</summary>
 
 ```bash
-# 1. Узнать id компании
+# 1. Find your company id
 curl -X POST https://yougile.com/api-v2/auth/companies \
   -H 'Content-Type: application/json' \
   -d '{"login": "you@example.com", "password": "..."}'
 
-# 2. Создать ключ
+# 2. Create a key
 curl -X POST https://yougile.com/api-v2/auth/keys \
   -H 'Content-Type: application/json' \
-  -d '{"login": "you@example.com", "password": "...", "companyId": "<id компании>"}'
+  -d '{"login": "you@example.com", "password": "...", "companyId": "<company id>"}'
 ```
 
 </details>
 
-> 🔒 Ключ даёт те же права, что и ваш аккаунт. Не публикуйте его. У ключа нет срока действия, удалить его можно через `DELETE /api-v2/auth/keys/{key}`. На аккаунт можно создать до 30 ключей.
+> 🔒 The key has the same rights as your account, so keep it private. It never expires; delete it with `DELETE /api-v2/auth/keys/{key}`. An account can have up to 30 keys.
 
-## ⚙️ Настройки
+## ⚙️ Settings
 
-| Поле | Зачем |
+| Field | What it is for |
 | --- | --- |
-| Ключ API | Обязательно. По нему плагин понимает, кто вы, и находит ваши задачи. |
-| Адрес YouGile | Если пусто, используется `https://yougile.com`. |
-| Шаблон ссылки на задачу | Куда ведёт ссылка из карточки. Подстановки: `{host}`, `{id}`, `{idTaskCommon}`, `{idTaskProject}`. |
-| Записывать время при завершении | Показывает окно, которое добавляет затреканное время в YouGile. |
+| API key | Required. Tells the plugin who you are and finds your tasks. |
+| YouGile address | Leave empty for `https://yougile.com`. |
+| Task link template | Where the link on a task card leads. Placeholders: `{host}`, `{id}`, `{idTaskCommon}`, `{idTaskProject}`. |
+| Log time when a task is done | Shows a dialog that adds your tracked time to YouGile. |
 
-## ⚠️ Ограничения
+## ⚠️ Limitations
 
-- 🕐 **Опрос, а не мгновенные события.** Изменения из YouGile приходят раз в 3 минуты и только пока Super Productivity открыт. Изменения из Super Productivity уходят сразу.
-- 🚦 **Лимит YouGile: 50 запросов в минуту на компанию.** Плагин тратит один запрос на всю пачку ваших задач, но лимит общий для всех интеграций компании.
-- 👥 **Затраченное время — одно число на задачу.** В YouGile оно не делится по сотрудникам, поэтому SuperGile прибавляет ваше время к общему.
-- 🧩 **Подзадачи и чек-листы** пока не синхронизируются: чек-листы только видны в карточке.
-- 🔗 **Ссылка на задачу** по умолчанию открывает YouGile, а не конкретную задачу. Формат прямой ссылки настраивается шаблоном.
-- 🔐 **Ключ хранится в настройках провайдера** Super Productivity. Если вы пользуетесь синхронизацией Super Productivity, он уйдёт вместе с остальными настройками.
+- 🕐 **Polling, not instant events.** Changes from YouGile arrive every 3 minutes and only while Super Productivity is open. Changes from Super Productivity are sent right away.
+- 🚦 **YouGile allows 50 requests per minute per company.** The plugin uses one request for your whole batch of tasks, but the limit is shared by all of the company's integrations.
+- 👥 **Time spent is one number per task.** YouGile does not split it by person, so SuperGile adds your time to the total.
+- 🧩 **Subtasks and checklists** are not synced yet; checklists are only shown on the card.
+- 🔗 **The task link** opens YouGile by default, not the exact task. The direct link format is set with the template.
+- 🔐 **The key is stored in the provider settings** of Super Productivity. If you use Super Productivity sync, it travels with the rest of your settings.
 
-## 🛠️ Разработка
+## 🛠️ Development
 
 ```bash
 npm install
-npm test           # тесты (vitest)
-npm run typecheck  # проверка типов
-npm run build      # сборка в dist/
-npm run package    # сборка + zip в release/
+npm test           # tests (vitest)
+npm run typecheck  # type check
+npm run build      # build into dist/
+npm run package    # build + zip into release/
 ```
 
-Готовый zip из `release/` можно сразу загрузить в Super Productivity.
+The zip in `release/` can be uploaded to Super Productivity as is.
 
-### Как устроен код
+### Code layout
 
 ```
 src/
-├── plugin.ts            # точка входа: регистрирует провайдер
-├── manifest.json        # описание плагина для Super Productivity
-├── i18n/                # тексты на английском и русском
+├── plugin.ts            # entry point: registers the provider
+├── manifest.json        # plugin description for Super Productivity
+├── i18n/                # English and Russian texts
 ├── provider/
-│   ├── config.ts        # форма настроек
-│   ├── mapping.ts       # YouGile ↔ Super Productivity: поля и преобразования
-│   └── definition.ts    # сам issue provider: импорт, обновление, учёт времени
+│   ├── config.ts        # settings form
+│   ├── mapping.ts       # YouGile ↔ Super Productivity: fields and conversions
+│   └── definition.ts    # the issue provider: import, updates, time tracking
 ├── yougile/
-│   ├── client.ts        # клиент YouGile REST API v2
-│   └── types.ts         # типы API
-└── utils/               # время, даты, HTML ↔ Markdown
-vendor/plugin-api/       # типы Plugin API Super Productivity (MIT)
-scripts/                 # сборка и получение ключа API
+│   ├── client.ts        # YouGile REST API v2 client
+│   └── types.ts         # API types
+└── utils/               # time, dates, HTML ↔ Markdown
+vendor/plugin-api/       # Super Productivity Plugin API types (MIT)
+scripts/                 # build and API key helper
 ```
 
-### 🌿 Ветки и релизы
+### 🌿 Branches and releases
 
-- Каждая фича делается в отдельной ветке `feature/...` и сливается в `main`.
-- На каждый push и pull request GitHub Actions проверяет типы, гоняет тесты и собирает zip (его можно скачать из артефактов запуска).
-- Релиз: поднимите `version` в `package.json`, закоммитьте и поставьте тег:
+- Every feature is built on its own `feature/...` branch and merged into `main`.
+- On every push and pull request, GitHub Actions type-checks, runs the tests and builds the zip (downloadable from the run's artifacts).
+- To release, bump `version` in `package.json`, commit, and push a tag:
 
   ```bash
   git tag v0.2.0
   git push origin v0.2.0
   ```
 
-  Workflow **Release** соберёт плагин и опубликует GitHub Release с zip-файлом.
-- Или без тега: **Actions → Release → Run workflow**. Тег `v<версия из package.json>` поставится сам.
+  The **Release** workflow builds the plugin and publishes a GitHub Release with the zip.
+- Or without a tag: **Actions → Release → Run workflow**. It tags the commit with `v<package.json version>` itself.
 
-## 📚 Полезные ссылки
+## 📚 Links
 
 - [YouGile REST API v2](https://yougile.com/api-v2#/)
-- [Разработка плагинов Super Productivity](https://github.com/johannesjo/super-productivity/blob/master/docs/plugin-development.md)
+- [Super Productivity plugin development](https://github.com/johannesjo/super-productivity/blob/master/docs/plugin-development.md)
 
-## 📄 Лицензия
+## 📄 License
 
 [MIT](LICENSE)
