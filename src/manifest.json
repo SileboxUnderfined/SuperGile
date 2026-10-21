@@ -3,7 +3,7 @@
   "name": "YouGile (SuperGile)",
   "version": "0.0.0",
   "manifestVersion": 1,
-  "minSupVersion": "19.0.0",
+  "minSupVersion": "19.2.0",
   "description": "Two-way sync of your YouGile tasks with Super Productivity",
   "author": "SileboxUnderfined",
   "type": "issueProvider",
