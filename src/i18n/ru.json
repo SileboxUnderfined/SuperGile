@@ -1,1 +1,35 @@
-{}
+{
+  "CFG": {
+    "API_KEY": "Ключ API YouGile",
+    "API_KEY_DESC": "Ключ вашего аккаунта YouGile. Получить его можно скриптом из репозитория или запросом POST /api-v2/auth/keys (см. README).",
+    "HOST": "Адрес YouGile",
+    "HOST_DESC": "Оставьте пустым для https://yougile.com.",
+    "TASK_URL": "Шаблон ссылки на задачу",
+    "TASK_URL_DESC": "Ссылка, которая открывается из задачи. Подстановки: {host}, {id}, {idTaskCommon}, {idTaskProject}.",
+    "IS_SHOW_TIME_TRACKING_DIALOG": "Записывать время в YouGile при завершении задачи",
+    "IS_SHOW_TIME_TRACKING_DIALOG_DESC": "Показывает окно, которое добавляет затреканное время в таймтрекинг задачи в YouGile.",
+    "IS_SHOW_TIME_TRACKING_DIALOG_FOR_EACH_SUB_TASK": "Показывать окно для каждой подзадачи",
+    "DEFAULT_TIME": "Время по умолчанию",
+    "DEFAULT_TIME_ALL_TIME": "Всё затреканное время",
+    "DEFAULT_TIME_ALL_TIME_MINUS_LOGGED": "Всё время минус уже записанное",
+    "DEFAULT_TIME_TODAY": "Время за сегодня",
+    "DEFAULT_TIME_YESTERDAY": "Время за вчера"
+  },
+  "DISPLAY": {
+    "TITLE": "Задача",
+    "CODE": "ID",
+    "STATUS": "Статус",
+    "DEADLINE": "Дедлайн",
+    "TIME_PLAN": "План",
+    "TIME_WORK": "Затрачено",
+    "CHECKLISTS": "Чек-листы",
+    "DESCRIPTION": "Описание"
+  },
+  "STATUS": {
+    "OPEN": "В работе",
+    "DONE": "Выполнена",
+    "ARCHIVED": "В архиве",
+    "DELETED": "Удалена"
+  },
+  "FORM_HELP": "<p>Импортирует задачи YouGile, назначенные на вас, и синхронизирует их: выполнение, название, дедлайн и оценку времени в обе стороны, описание из YouGile. Подробнее: <a href=\"https://github.com/SileboxUnderfined/SuperGile\">SuperGile на GitHub</a>.</p>"
+}

@@ -1,1 +1,35 @@
-{}
+{
+  "CFG": {
+    "API_KEY": "YouGile API key",
+    "API_KEY_DESC": "Key of your YouGile account. Get one with the helper script or POST /api-v2/auth/keys (see the README).",
+    "HOST": "YouGile address",
+    "HOST_DESC": "Leave empty for https://yougile.com.",
+    "TASK_URL": "Task link template",
+    "TASK_URL_DESC": "Link opened from a task. Placeholders: {host}, {id}, {idTaskCommon}, {idTaskProject}.",
+    "IS_SHOW_TIME_TRACKING_DIALOG": "Log time to YouGile when a task is done",
+    "IS_SHOW_TIME_TRACKING_DIALOG_DESC": "Shows a dialog that adds the time you tracked to the task's time tracking in YouGile.",
+    "IS_SHOW_TIME_TRACKING_DIALOG_FOR_EACH_SUB_TASK": "Show the dialog for each subtask",
+    "DEFAULT_TIME": "Preselected time",
+    "DEFAULT_TIME_ALL_TIME": "All tracked time",
+    "DEFAULT_TIME_ALL_TIME_MINUS_LOGGED": "All tracked time minus already logged",
+    "DEFAULT_TIME_TODAY": "Time tracked today",
+    "DEFAULT_TIME_YESTERDAY": "Time tracked yesterday"
+  },
+  "DISPLAY": {
+    "TITLE": "Task",
+    "CODE": "ID",
+    "STATUS": "Status",
+    "DEADLINE": "Deadline",
+    "TIME_PLAN": "Planned",
+    "TIME_WORK": "Spent",
+    "CHECKLISTS": "Checklists",
+    "DESCRIPTION": "Description"
+  },
+  "STATUS": {
+    "OPEN": "In progress",
+    "DONE": "Done",
+    "ARCHIVED": "Archived",
+    "DELETED": "Deleted"
+  },
+  "FORM_HELP": "<p>Imports YouGile tasks assigned to you and keeps them in sync: done state, title, deadline and time estimate in both directions, the description from YouGile. See <a href=\"https://github.com/SileboxUnderfined/SuperGile\">SuperGile on GitHub</a>.</p>"
+}
