@@ -18,5 +18,5 @@
       "@sp/plugin-api": ["vendor/plugin-api/index.ts"]
     }
   },
-  "include": ["src/**/*", "test/**/*", "vendor/**/*"]
+  "include": ["src/**/*", "test/**/*", "vendor/**/*", "vitest.config.ts"]
 }
