@@ -54,7 +54,7 @@ You can change the direction of each field in the provider settings in Super Pro
 3. Enable the plugin. In your project open **Project settings → Integrations** and add the **YouGile** provider.
 4. Paste your API key (see below how to get one) and click "Test connection".
 
-> 💡 Requires Super Productivity 19 or newer, which added two-way sync for plugins.
+> 💡 Requires Super Productivity 19.2.0 or newer: older versions lack the plugin API for time logging and batch refresh.
 > Works in the desktop app and on mobile. In the browser version, requests may be blocked by CORS.
 
 ## 🔑 Getting an API key
