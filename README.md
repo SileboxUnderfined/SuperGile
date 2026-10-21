@@ -147,6 +147,7 @@ scripts/                 # сборка и получение ключа API
   ```
 
   Workflow **Release** соберёт плагин и опубликует GitHub Release с zip-файлом.
+- Или без тега: **Actions → Release → Run workflow**. Тег `v<версия из package.json>` поставится сам.
 
 ## 📚 Полезные ссылки
 
