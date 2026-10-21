@@ -44,7 +44,11 @@ export const htmlToMarkdown = (html: string | undefined): string => {
 };
 
 const escapeHtml = (text: string): string =>
-  text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 
 /** Plain Markdown text to simple HTML: paragraphs, line breaks, bold, italic and links. */
 export const markdownToHtml = (md: string | undefined): string => {
