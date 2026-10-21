@@ -56,3 +56,17 @@ describe('markdownToHtml', () => {
     expect(htmlToMarkdown(markdownToHtml(md))).toBe(md);
   });
 });
+
+describe('markdownToHtml escaping', () => {
+  it('keeps a quote in a link URL inside the href attribute', () => {
+    const html = markdownToHtml('[x](https://a.b/"onmouseover="alert(1))');
+    expect(html).not.toContain('"onmouseover="');
+    expect(html).toBe(
+      '<p><a href="https://a.b/&quot;onmouseover=&quot;alert(1">x</a>)</p>',
+    );
+  });
+
+  it('escapes quotes in plain text', () => {
+    expect(markdownToHtml('say "hi"')).toBe('<p>say &quot;hi&quot;</p>');
+  });
+});
