@@ -13,7 +13,8 @@
     "package": "node scripts/build.mjs --zip",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "check": "npm run typecheck && npm test && npm run build"
+    "check": "npm run typecheck && npm test && npm run build",
+    "api-key": "node scripts/get-api-key.mjs"
   },
   "devDependencies": {
     "@types/node": "^22.20.5",
