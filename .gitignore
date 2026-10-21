@@ -30,3 +30,6 @@ Thumbs.db
 !.vscode/extensions.json
 *.swp
 *~
+
+# Packed plugin archives
+release/
